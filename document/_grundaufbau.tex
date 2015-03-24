@@ -56,7 +56,7 @@ Um in \LaTeX verschiedene Farben zu verwenden benötigt man zunächst
 \\
 Anschließend können Farben folgendermaßen benutzt werden:
 \begin{flushleft}
-\pagecolor{white}   % weißer Seitenhintergrund
+\pagecolor{white}   % weisser Seitenhintergrund
 \color{blue}         % blauer Text
 Dieser Text ist
 \textcolor{green}{\textbf{BLAU}}!    % gruener Text "BLAU"
@@ -75,15 +75,17 @@ Der Text ist hellrot}\\
 \subsection{Listen}
 In LaTeX ist es möglich nummerierte und nicht nummerierte Listen darzustellen:
 
+\begin{table}[h]
 \begin{tabular}{c|c}
 nummerierte Liste & nicht nummerierte Liste \\ 
-\hline  
+\hline { 
 \begin{itemize}
-\item
+\item df
 \end{itemize}	
-	&  \\ 
+}	&  \\ 
 	
 \hline 
 	&  \\ 
 	
 \end{tabular} 
+\end{table}
