@@ -1,0 +1,73 @@
+\section{Grundaufbau}
+\subsection{Dokumentenstruktur}
+Ein \LaTeX Dokument besteht zunächst aus zwei grundlegenden Teilen. Zum einen 
+gibt es den \texttt{Header}-Teil und zum anderen den \texttt{document}-Teil.
+\\
+Der  \texttt{Header}-Teil beinhaltet grundlegende Layout Einstellungen, 
+eingebundene Pakete und weitere Definitionen.
+\\
+Der Body des Dokuments enthält die eigentlichen Daten, die in ein Dokument 
+eingefügt werden sollen.
+\\ In der Abbildung \ref{lst:main:main} ist ein grundlegender 
+Dokumentenausbau dargestellt:
+\lstinputlisting[label=lst:main:main]{./src/main/main.tex}
+
+\subsection{Grundlegende Formatierungen}
+Wie auch in anderen Texteditoren lassen sich in \LaTeX einzelne Wörter oder 
+Codeblöcke verschieden formatieren: \\
+\newline
+\begin{flushleft}
+\textbf{Ich bin fett geschrieben} \hspace{1cm}
+\textit{Ich bin kursiv geschrieben} \hspace{1cm}
+\underline{Ich bin unterstrichen} \\
+\texttt{Das ist Schreibmaschinenschrift} \hspace{1cm}
+\underline{\textbf{Ich bin Fett und unterstrichen}} 
+\flushleft Ich werde linksbündig dargestellt \\
+\flushright Ich befinde mich rechts \\
+\center Ich bin in der Mitte
+\end{flushleft}
+
+
+
+\lstinputlisting[label=lst:main:format1]{./src/main/format1.tex}
+
+Diese und viele weitere Formatierungen können ebenso als Blockformatierung 
+verwendet werden:
+
+\lstinputlisting[label=lst:main:format2]{./src/main/format2.tex}
+
+\subsection{Umbrüche und Freiräume}
+In \LaTeX \ gibt es verschiedene Möglichkeiten, Zeilen, Seiten, oder 
+Abschnittsumbrüche herbeizuführen. Außerdem kann man Abstände zwischen Blöcken 
+definieren:
+\lstinputlisting[label=lst:main:umbruch]{./src/main/umbruch.tex}
+
+\subsection{Überschriften / Abschnitte}
+Überschriften bzw. Abschnitte lassen sich mit den folgenden Kommandos einfügen:
+\lstinputlisting[label=lst:main:sections]{./src/main/sections.tex}
+Die Überschriften werden automatisch dem Inhaltsverzeichnis hinzugefügt, sofern 
+dieses eingebunden wurde und die Überschriften nicht mit einem $*$ 
+gekennzeichnet sind.
+\subsection{Farben}
+
+Um in \LaTeX verschiedene Farben zu verwenden benötigt man zunächst
+\lstinline$ \usepackage{color} $ bzw. \lstinline$ \usepackage{xcolor} $ im 
+\texttt{Header}-Bereich des Dokumentes.
+\\
+Anschließend können Farben folgendermaßen benutzt werden:
+\begin{flushleft}
+\pagecolor{white}   % weißer Seitenhintergrund
+\color{blue}         % blauer Text
+Dieser Text ist
+\textcolor{green}{\textbf{BLAU}}!    % gruener Text "BLAU"
+\colorbox{orange}{Box mit orangen Hintergrund}   % roter Text in oranger Box
+\fboxrule1mm
+\definecolor{rahmen}{rgb}{.7,1,.7}      % hellgruener Rahmen
+\definecolor{grund}{gray}{.8}           % grauer Box-Hintergrund
+\definecolor{schrift}{cmyk}{.4,1,1,0}   % hellroter Text
+\color{schrift}
+\fcolorbox{rahmen}{grund}{Box mit hellgruenem Rahmen und grauem Hintergrund; 
+Der Text ist hellrot}\\
+\end{flushleft}
+\lstinputlisting[label=lst:main:color]{./src/main/color.tex}
+\subsection{Listen}

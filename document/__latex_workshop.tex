@@ -1,0 +1,80 @@
+\documentclass[
+    numbers=noenddot, %Keine Punkte am Ende des TOC
+    toc=flat, %Flache TOC
+    12pt, % Schriftgröße
+    titlepage, % es wird eine Titelseite verwendet
+    %parskip=half, % Abstand zwischen Absätzen (halbe Zeile)
+    listof=totoc, % Verzeichnisse im Inhaltsverzeichnis aufführen
+    %^enlargefirstpage,
+    bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis aufführen
+    %index=totoc, % Index im Inhaltsverzeichnis aufführen
+    %captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
+    %draft % Status des Dokuments (final/draft) draft hinzufügen zum anziegen 
+    %%der zeilen ende
+]{scrartcl}
+
+\include{global}
+\include{listings}
+
+\begin{document}
+\pagenumbering{gobble}
+\input{_coverSheet}
+\newpage
+	
+\pagestyle{fancy} %eigener Seitenstil an hier
+\fancyhf{} % Kopf- und Fußzeilenfelder bereinigen
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie sichtbar setzen
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie sichtbar setzen
+	
+\lhead{{\footnotesize \textsc{Inhaltsverzeichnis}}} %Kopfzeile anpassen
+\tableofcontents
+\newpage % Neue Seite
+	
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\rhead{}
+\chead{}
+\lhead{{\footnotesize \textsc{Verzeichnisse}}} %Kopfzeile anpassen	
+\lfoot{}
+\cfoot{}
+\rfoot{}
+	
+\input{acro}
+%\newpage
+\listoffigures %Abbildungsverzeichnis
+\listoftables %Tabellenverzeichnis
+\lstlistoflistings %Listingverzeichnis
+	
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\parindent0pt % Keine Absatzeinrückungen
+\parskip2ex %Absatzhöhe
+	
+\lhead{{\footnotesize \thesection \quad \textsc{\leftmark}}}  %Kopfzeile in der 
+%Kaptitel und Nummerierung links steht
+\chead{}
+\rhead{\thepage}
+	
+\lfoot{\authorname}
+\cfoot{}
+\rfoot{\today}
+	
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\input{_grundaufbau}
+\input{_verzeichnisse}
+%%%%%%%%%%%%%%%%%%%%%%%
+	
+\newpage
+\pagenumbering{gobble}
+\begin{flushleft}% Flattersatz
+	    \begin{appendix}
+	        \fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+	        \renewcommand{\headrulewidth}{0.0pt} %obere Trennlinie unsichtbar
+	        \renewcommand{\footrulewidth}{0.0pt} %untere Trennlinie unsichtbar
+			
+			%\input{_umlDiff}
+
+		\end{appendix}
+	\end{flushleft}
+\end{document}
