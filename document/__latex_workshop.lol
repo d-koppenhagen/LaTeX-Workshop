@@ -4,3 +4,7 @@
 \contentsline {lstlisting}{./src/main/umbruch.tex}{2}{lstlisting.-4}
 \contentsline {lstlisting}{./src/main/sections.tex}{3}{lstlisting.-5}
 \contentsline {lstlisting}{./src/main/color.tex}{3}{lstlisting.-6}
+\contentsline {lstlisting}{./src/main/enum.tex}{4}{lstlisting.-7}
+\contentsline {lstlisting}{./src/main/itemize.tex}{4}{lstlisting.-8}
+\contentsline {lstlisting}{./src/verz/acro.tex}{5}{lstlisting.-9}
+\contentsline {lstlisting}{./src/verz/acro2.tex}{5}{lstlisting.-10}
